@@ -31,6 +31,8 @@ const makeRedirect = (dest: string) => {
 
 const makeNixosRedirect = (opts: NixosSearchParams) => makeRedirect(makeNixosSearch(opts));
 
+app.get('/', () => makeRedirect(`https://search.nixos.org/packages`));
+
 app.get('/docs', () => makeRedirect(`https://ryantm.github.io/nixpkgs/`));
 app.get('/docs/:rest{.+}', (c) => makeRedirect(`https://ryantm.github.io/nixpkgs/${c.req.param('rest')}`));
 
