@@ -1,0 +1,43 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm run lint -f @microsoft/eslint-formatter-sarif -o /tmp/lint.sarif
+        continue-on-error: true
+
+      - name: Strip suppressed results
+        run: pnpm dlx @ryanccn/sarif-strip-suppressed /tmp/lint.sarif
+
+      - name: Upload results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: /tmp/lint.sarif
+          wait-for-processing: true

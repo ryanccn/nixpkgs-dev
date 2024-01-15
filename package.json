@@ -1,0 +1,25 @@
+{
+	"name": "nixpkgs-dev",
+	"version": "0.0.1",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"lint": "eslint ."
+	},
+	"dependencies": {
+		"hono": "^3.12.4"
+	},
+	"devDependencies": {
+		"@cloudflare/workers-types": "^4.20231218.0",
+		"@microsoft/eslint-formatter-sarif": "^3.0.0",
+		"@typescript-eslint/eslint-plugin": "^6.18.1",
+		"@typescript-eslint/parser": "^6.18.1",
+		"eslint": "^8.56.0",
+		"tsx": "^4.7.0",
+		"typescript": "^5.3.3",
+		"wrangler": "^3.22.4"
+	},
+	"packageManager": "pnpm@8.14.1"
+}

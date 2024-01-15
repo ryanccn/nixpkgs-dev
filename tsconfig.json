@@ -1,0 +1,27 @@
+{
+	"compilerOptions": {
+		"module": "es2022",
+		"target": "es2022",
+		"moduleResolution": "bundler",
+		"lib": ["es2022"],
+		"jsx": "react",
+
+		"types": ["@cloudflare/workers-types"],
+		"resolveJsonModule": true,
+
+		"allowJs": true,
+		"checkJs": false,
+		"noEmit": true,
+
+		"isolatedModules": true,
+		"allowSyntheticDefaultImports": true,
+		// "esModuleInterop": true,
+		// "preserveSymlinks": true,
+		"forceConsistentCasingInFileNames": true,
+
+		"strict": true,
+		"noUncheckedIndexedAccess": true,
+
+		"skipLibCheck": true
+	}
+}

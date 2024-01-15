@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+
+# wrangler
+.dev.vars
+.wrangler/
+
+# IDEs
+.idea/
+.vscode/*
+!.vscode/extensions.json
