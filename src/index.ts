@@ -22,24 +22,28 @@ const makeNixosSearch = ({ type, name, channel }: NixosSearchParams) => {
 	return base.toString();
 };
 
-const makeRedirect = (opts: NixosSearchParams) => {
-	const dest = makeNixosSearch(opts);
+const makeRedirect = (dest: string) => {
 	return new Response(`Redirecting to ${dest}`, {
 		status: 302,
 		headers: { 'content-type': 'text/plain; charset=utf-8', location: dest },
 	});
 };
 
+const makeNixosRedirect = (opts: NixosSearchParams) => makeRedirect(makeNixosSearch(opts));
+
+app.get('/docs', () => makeRedirect(`https://ryantm.github.io/nixpkgs/`));
+app.get('/docs/:rest{.+}', (c) => makeRedirect(`https://ryantm.github.io/nixpkgs/${c.req.param('rest')}`));
+
 app
 	.route('/option')
 	.get('/:opt', (c) =>
-		makeRedirect({
+		makeNixosRedirect({
 			type: 'options',
 			name: c.req.param('opt'),
 		})
 	)
 	.get('/:channel/:opt', (c) =>
-		makeRedirect({
+		makeNixosRedirect({
 			type: 'options',
 			name: c.req.param('opt'),
 			channel: c.req.param('channel'),
@@ -47,14 +51,14 @@ app
 	);
 
 app.get('/:pkg', (c) =>
-	makeRedirect({
+	makeNixosRedirect({
 		type: 'packages',
 		name: c.req.param('pkg'),
 	})
 );
 
 app.get('/:channel/:pkg', (c) =>
-	makeRedirect({
+	makeNixosRedirect({
 		type: 'packages',
 		name: c.req.param('pkg'),
 		channel: c.req.param('channel'),
