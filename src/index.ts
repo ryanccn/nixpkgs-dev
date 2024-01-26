@@ -33,6 +33,9 @@ const makeNixosRedirect = (opts: NixosSearchParams) => makeRedirect(makeNixosSea
 
 app.get('/', () => makeRedirect(`https://search.nixos.org/packages`));
 
+app.get('/pr/:id', (c) => makeRedirect(`https://github.com/NixOS/nixpkgs/pull/${c.req.param('id')}`));
+app.get('/pull/:id', (c) => makeRedirect(`https://github.com/NixOS/nixpkgs/pull/${c.req.param('id')}`));
+
 app.get('/docs', () => makeRedirect(`https://ryantm.github.io/nixpkgs/`));
 app.get('/docs/:rest{.+}', (c) => makeRedirect(`https://ryantm.github.io/nixpkgs/${c.req.param('rest')}`));
 
