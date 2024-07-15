@@ -14,8 +14,8 @@ devDependencies:
     specifier: ^4.20240405.0
     version: 4.20240405.0
   '@microsoft/eslint-formatter-sarif':
-    specifier: ^3.0.0
-    version: 3.0.0
+    specifier: ^3.1.0
+    version: 3.1.0
   '@typescript-eslint/eslint-plugin':
     specifier: ^7.0.0
     version: 7.0.0(@typescript-eslint/parser@6.21.0)(eslint@8.56.0)(typescript@5.3.3)
@@ -605,8 +605,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
-  /@microsoft/eslint-formatter-sarif@3.0.0:
-    resolution: {integrity: sha512-KIKkT44hEqCzqxODYwFMUvYEK0CrdHx/Ll9xiOWgFbBSRuzbxmVy4d/tzfgoucGz72HJZNOMjuyzFTBKntRK5Q==}
+  /@microsoft/eslint-formatter-sarif@3.1.0:
+    resolution: {integrity: sha512-/mn4UXziHzGXnKCg+r8HGgPy+w4RzpgdoqFuqaKOqUVBT5x2CygGefIrO4SusaY7t0C4gyIWMNu6YQT6Jw64Cw==}
     engines: {node: '>= 14'}
     dependencies:
       eslint: 8.56.0
