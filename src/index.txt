@@ -1,0 +1,34 @@
+nixpkgs.dev
+===========
+
+This is a convenient link shortener for Nixpkgs packages and NixOS
+options on search.nixos.org.
+
+
+Routes
+------
+
+/pr/:id
+/pull/:id
+  => https://github.com/NixOS/nixpkgs/pull/:id
+
+/docs
+  => https://ryantm.github.io/nixpkgs/
+/docs/:rest{.+}
+  => https://ryantm.github.io/nixpkgs/:rest
+
+/option/:opt
+  => https://search.nixos.org/options?show=:opt&channel=unstable
+/option/:channel/:opt
+  => https://search.nixos.org/options?show=:opt&channel=:channel
+
+/:pkg
+  => https://search.nixos.org/packages?show=:pkg&channel=unstable
+/:channel/:pkg
+  => https://search.nixos.org/packages?show=:pkg&channel=:channel
+
+
+GitHub
+------
+
+https://github.com/ryanccn/nixpkgs-dev
