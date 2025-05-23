@@ -22,6 +22,9 @@ Routes
 /option/:channel/:opt
   => https://search.nixos.org/options?show=:opt&channel=:channel
 
+/channel/:channel
+  => https://channels.nixos.org/:channel/nixexprs.tar.xz
+
 /:pkg
   => https://search.nixos.org/packages?show=:pkg&channel=unstable
 /:channel/:pkg
