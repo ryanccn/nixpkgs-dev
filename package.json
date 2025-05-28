@@ -11,20 +11,20 @@
 		"lint": "eslint ."
 	},
 	"dependencies": {
-		"hono": "^4.6.3"
+		"hono": "^4.7.10"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20241004.0",
+		"@cloudflare/workers-types": "^4.20250523.0",
 		"@microsoft/eslint-formatter-sarif": "^3.1.0",
-		"@ryanccn/eslint-config": "^0.4.1",
-		"esbuild": "^0.24.0",
-		"eslint": "^9.12.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-unicorn": "^56.0.0",
-		"tsx": "^4.19.1",
-		"typescript": "^5.6.2",
-		"typescript-eslint": "^8.8.1",
-		"wrangler": "^3.80.1"
+		"@ryanccn/eslint-config": "^0.5.0",
+		"esbuild": "^0.25.4",
+		"eslint": "^9.27.0",
+		"eslint-config-prettier": "^10.1.5",
+		"eslint-plugin-unicorn": "^59.0.1",
+		"tsx": "^4.19.4",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.32.1",
+		"wrangler": "^4.16.1"
 	},
-	"packageManager": "pnpm@9.12.1+sha512.e5a7e52a4183a02d5931057f7a0dbff9d5e9ce3161e33fa68ae392125b79282a8a8a470a51dfc8a0ed86221442eb2fb57019b0990ed24fab519bf0e1bc5ccfc4"
+	"packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977"
 }

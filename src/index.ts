@@ -73,6 +73,11 @@ app.get('/:pkg', (c) =>
 	})
 );
 
+app.get('/channel/:channel', (c) => {
+	const { channel } = c.req.param();
+	return makeRedirect(`https://channels.nixos.org/${channel}/nixexprs.tar.xz`);
+});
+
 app.get('/:channel/:pkg', (c) =>
 	makeNixosRedirect({
 		type: 'packages',
