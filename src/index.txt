@@ -2,7 +2,7 @@ nixpkgs.dev
 ===========
 
 This is a convenient link shortener for Nixpkgs packages and NixOS
-options on search.nixos.org.
+options on search.nixos.org, and Nix channels on channels.nixos.org.
 
 
 Routes

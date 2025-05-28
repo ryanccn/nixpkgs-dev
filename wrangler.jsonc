@@ -1,0 +1,13 @@
+{
+	"name": "nixpkgs-dev",
+	"main": "dist/index.js",
+	"compatibility_date": "2025-05-05",
+
+	"workers_dev": false,
+	"send_metrics": false,
+	"no_bundle": true,
+
+	"build": {
+		"command": "pnpm run build"
+	}
+}

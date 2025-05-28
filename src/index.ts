@@ -1,12 +1,11 @@
 import { Hono } from 'hono';
-import type { Env } from './env';
 
 import { logger } from 'hono/logger';
 import { secureHeaders } from 'hono/secure-headers';
 
 import index from './index.txt';
 
-const app = new Hono<Env>();
+const app = new Hono();
 app.use(logger());
 app.use(secureHeaders());
 
