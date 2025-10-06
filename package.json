@@ -19,7 +19,7 @@
 		"@microsoft/eslint-formatter-sarif": "^3.1.0",
 		"@ryanccn/eslint-config": "^0.5.0",
 		"esbuild": "^0.25.5",
-		"eslint": "^9.27.0",
+		"eslint": "^9.37.0",
 		"eslint-config-prettier": "^10.1.5",
 		"eslint-plugin-unicorn": "^59.0.1",
 		"tsx": "^4.19.4",
