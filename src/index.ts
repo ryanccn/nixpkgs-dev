@@ -1,12 +1,9 @@
 import { Hono } from 'hono';
-
-import { logger } from 'hono/logger';
 import { secureHeaders } from 'hono/secure-headers';
 
 import index from './index.txt';
 
 const app = new Hono();
-app.use(logger());
 app.use(secureHeaders());
 
 interface NixosSearchParams {
