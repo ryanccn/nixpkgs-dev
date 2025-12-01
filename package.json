@@ -11,21 +11,21 @@
 		"lint": "eslint ."
 	},
 	"dependencies": {
-		"hono": "^4.10.3"
+		"hono": "^4.10.7"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^4.20251014.0",
-		"@eslint/js": "^9.38.0",
+		"@cloudflare/workers-types": "^4.20251128.0",
+		"@eslint/js": "^9.39.1",
 		"@microsoft/eslint-formatter-sarif": "^3.1.0",
-		"@ryanccn/eslint-config": "^0.5.0",
-		"esbuild": "^0.25.11",
-		"eslint": "^9.38.0",
+		"@ryanccn/eslint-config": "^0.5.1",
+		"esbuild": "^0.27.0",
+		"eslint": "^9.39.1",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-unicorn": "^61.0.2",
-		"tsx": "^4.20.6",
+		"tsx": "^4.21.0",
 		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.46.2",
-		"wrangler": "^4.45.0"
+		"typescript-eslint": "^8.48.0",
+		"wrangler": "^4.51.0"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
