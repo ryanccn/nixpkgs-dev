@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       hono:
-        specifier: ^4.10.3
-        version: 4.10.3
+        specifier: ^4.11.7
+        version: 4.11.7
     devDependencies:
       '@cloudflare/workers-types':
         specifier: ^4.20251014.0
@@ -1148,8 +1148,8 @@ packages:
     resolution: {integrity: sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==}
     engines: {node: '>=8'}
 
-  hono@4.10.3:
-    resolution: {integrity: sha512-2LOYWUbnhdxdL8MNbNg9XZig6k+cZXm5IjHn2Aviv7honhBMOHb+jxrKIeJRZJRmn+htUCKhaicxwXuUDlchRA==}
+  hono@4.11.7:
+    resolution: {integrity: sha512-l7qMiNee7t82bH3SeyUCt9UF15EVmaBvsppY2zQtrbIhl/yzBTny+YUxsVjSjQ6gaqaeVtZmGocom8TzBlA4Yw==}
     engines: {node: '>=16.9.0'}
 
   ignore@5.3.2:
@@ -2572,7 +2572,7 @@ snapshots:
 
   has-flag@4.0.0: {}
 
-  hono@4.10.3: {}
+  hono@4.11.7: {}
 
   ignore@5.3.2: {}
 
