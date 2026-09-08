@@ -1,7 +1,7 @@
 {
 	"name": "nixpkgs-dev",
 	"main": "dist/index.js",
-	"compatibility_date": "2025-05-05",
+	"compatibility_date": "2026-09-08",
 
 	"workers_dev": false,
 	"send_metrics": false,

@@ -17,7 +17,7 @@ const makeNixosSearch = ({ type, name, channel }: NixosSearchParams) => {
 	base.searchParams.set('channel', channel ?? 'unstable');
 	base.searchParams.set('show', name);
 
-	return base.toString();
+	return base.href;
 };
 
 const makeRedirect = (dest: string) => {
@@ -34,14 +34,14 @@ app.get(
 	() =>
 		new Response(index, {
 			headers: { 'content-type': 'text/plain; charset=utf-8' },
-		})
+		}),
 );
 
 app.get('/pr/:id', (c) =>
-	makeRedirect(`https://github.com/NixOS/nixpkgs/pull/${encodeURIComponent(c.req.param('id'))}`)
+	makeRedirect(`https://github.com/NixOS/nixpkgs/pull/${encodeURIComponent(c.req.param('id'))}`),
 );
 app.get('/pull/:id', (c) =>
-	makeRedirect(`https://github.com/NixOS/nixpkgs/pull/${encodeURIComponent(c.req.param('id'))}`)
+	makeRedirect(`https://github.com/NixOS/nixpkgs/pull/${encodeURIComponent(c.req.param('id'))}`),
 );
 
 app.get('/docs', () => makeRedirect(`https://ryantm.github.io/nixpkgs/`));
@@ -51,7 +51,7 @@ app.get('/option/:opt', (c) =>
 	makeNixosRedirect({
 		type: 'options',
 		name: c.req.param('opt'),
-	})
+	}),
 );
 
 app.get('/option/:channel/:opt', (c) =>
@@ -59,19 +59,23 @@ app.get('/option/:channel/:opt', (c) =>
 		type: 'options',
 		name: c.req.param('opt'),
 		channel: c.req.param('channel'),
-	})
+	}),
 );
 
 app.get('/:pkg', (c) =>
 	makeNixosRedirect({
 		type: 'packages',
 		name: c.req.param('pkg'),
-	})
+	}),
 );
+
+const NO_ZSTD_CHANNELS = /^nix(?:os|pkgs)-(?:1|2[0-5])/m;
 
 app.get('/channel/:channel', (c) => {
 	const { channel } = c.req.param();
-	return makeRedirect(`https://channels.nixos.org/${channel}/nixexprs.tar.xz`);
+	return makeRedirect(
+		`https://channels.nixos.org/${channel}/nixexprs.tar.${NO_ZSTD_CHANNELS.test(channel) ? 'xz' : 'zst'}`,
+	);
 });
 
 app.get('/:channel/:pkg', (c) =>
@@ -79,7 +83,7 @@ app.get('/:channel/:pkg', (c) =>
 		type: 'packages',
 		name: c.req.param('pkg'),
 		channel: c.req.param('channel'),
-	})
+	}),
 );
 
 export default app;
