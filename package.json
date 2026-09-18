@@ -14,17 +14,17 @@
 		"hono": "^4.13.7"
 	},
 	"devDependencies": {
-		"@cloudflare/workers-types": "^5.20260907.1",
+		"@cloudflare/workers-types": "^5.20260915.1",
 		"@eslint/js": "^10.0.1",
 		"@microsoft/eslint-formatter-sarif": "^3.1.0",
-		"@ryanccn/eslint-config": "^0.5.1",
+		"@ryanccn/eslint-config": "^0.5.2",
 		"esbuild": "^0.28.2",
 		"eslint": "^10.10.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-unicorn": "^74.0.0",
 		"typescript": "^6.0.3",
-		"typescript-eslint": "^8.69.0",
-		"wrangler": "^4.129.0"
+		"typescript-eslint": "^8.70.0",
+		"wrangler": "^4.131.2"
 	},
 	"packageManager": "pnpm@12.4.0+sha512.ef9118885f06ba24ec9ef3f871b66cbe23018e8857518b60db38c3e2075f86ac65535cbd363f8a744b1b1f88df801fc583225260f076aea7e6bef80b9d1955ba"
 }
